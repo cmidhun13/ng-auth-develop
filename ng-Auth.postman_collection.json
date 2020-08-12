@@ -1,0 +1,455 @@
+{
+	"info": {
+		"_postman_id": "0bb4d5ea-cf36-4fe6-873d-f65fe08e2080",
+		"name": "ng-Auth",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create user in keycloak",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "tenant-id",
+						"value": "1"
+					},
+					{
+						"key": "x-correlation-id",
+						"value": "1001"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\" : \"riyapatel.2308@gmail.com\",\n  \"password\" : \"12345678\"\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:9090/auth/Create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"Create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save  Personal Detail API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRmhiUXdURTZVNk0wc3lsUHFIWVZiWVV2NTFINHBFbEUtNXp2Nlp6T1VnIn0.eyJqdGkiOiI5ZDMzMzViYy02ZWI5LTQxMDYtOGFjMS1kMWQyZmVmNjIxNmMiLCJleHAiOjE1ODgxNjU4OTAsIm5iZiI6MCwiaWF0IjoxNTg4MTU5ODkwLCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiZmNiNjgxNDItOTUxNS00ODEwLWI2NzUtZTIxNjg1NmM5NDc4IiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic3plbGxzLXNlcnZlciIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjMyYmRlODE4LWRiZDYtNDI5MS1hMzk0LTEyYjg4NDc3OThjYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJsYWsxMjM0NSJ9.Y4MM2QuPI-DVTLdbaGJZb4kEQNMbVoQqsBYM9KC7n_HSAgtnFWOIAFid38qpyBAB0mHOljyvRqcJhKSp_b_75Q3ICt2Kig_w9PpFYNfEkxcpvpgCS6xUSERyijl8KTUkkGeQ1OKd2tILWP-2SAxWHpukiJXUa2F79FaOb7n64rLooCpi9F_hPWwPOWDgG3HPSasmiCDnl7Ad6T-v9qLf9TKy-A9BbEc405hKWr-tQZIUdc8wyAHiHVMLE_V9BaGMFfcTebZZ-nJ31dOqJBwEvA7brvJBbidp_1T_eM92O09qWPiCQwTCK5AzcU234VOcFp6orF6iFrBjKRr63f0wjA",
+						"disabled": true
+					},
+					{
+						"key": "tenant-id",
+						"value": "1"
+					},
+					{
+						"key": "correlationId",
+						"value": "2000"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n  \"username\": \"krishqa1n@gmail.com\",\r\n  \"password\" : \"12345\",\r\n    \"email\": \"krisha1n@gmail.com\",\r\n  \"address_line1\": \"line 4\",\r\n  \"address_line2\": \"line 5\",\r\n  \"address_line3\": \"line 3\",\r\n  \"city\": \"los angls\",\r\n  \"state\": \"califor\",\r\n  \"country\": \"America\",\r\n  \"postal_code\": \"45353\"\r\n}"
+				},
+				"url": {
+					"raw": "http://18.223.195.84:9090/auth/users",
+					"protocol": "http",
+					"host": [
+						"18",
+						"223",
+						"195",
+						"84"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": " Forgot ID API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenant-id",
+						"value": "1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"firstName\":\"Abhishek\",\n  \"lastName\":\"Upadhyay\",\n  \"dob\":\"1991-04-14\",\n  \"hashCode\":null\n}"
+				},
+				"url": {
+					"raw": "http://18.223.195.84:9090/auth/forgotemail",
+					"protocol": "http",
+					"host": [
+						"18",
+						"223",
+						"195",
+						"84"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"forgotemail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Password reset from mail",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "tenant-id",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n   \"password\": \"11335577\",\n   \"hash_cd\": \"0c47c747-5246-46c4-97ea-a0789c4b8c08\"\n}\n"
+				},
+				"url": {
+					"raw": "http://18.223.195.84:9090/auth/resetpassword",
+					"protocol": "http",
+					"host": [
+						"18",
+						"223",
+						"195",
+						"84"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"resetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "token validate",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRmhiUXdURTZVNk0wc3lsUHFIWVZiWVV2NTFINHBFbEUtNXp2Nlp6T1VnIn0.eyJqdGkiOiIxY2UzNGM4MC1kOWM1LTRmYTMtYmZjNi1mNjMxZTBhYTE5YWUiLCJleHAiOjE1ODc5ODI4OTYsIm5iZiI6MCwiaWF0IjoxNTg3OTc2ODk2LCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOlsic3plbGxzLXJlYWxtIiwibWFzdGVyLXJlYWxtIiwiYWNjb3VudCJdLCJzdWIiOiI0NWQwNjBlMC01YzYxLTRhZTAtOThjZi0yZGIxNjQwNTIwYzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzemVsbHMtc2VydmVyIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiYjBlNTYxYmEtZDIyOS00OGI4LWFmZTUtNzViODgxYWIzNWIxIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImNyZWF0ZS1yZWFsbSIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InN6ZWxscy1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibWFzdGVyLXJlYWxtIjp7InJvbGVzIjpbInZpZXctcmVhbG0iLCJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsIm1hbmFnZS1pZGVudGl0eS1wcm92aWRlcnMiLCJpbXBlcnNvbmF0aW9uIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJhYmNkIGVmZyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFiY2RlZmciLCJnaXZlbl9uYW1lIjoiYWJjZCIsImZhbWlseV9uYW1lIjoiZWZnIiwibWVtYmVySWQiOiJhYmNkQGdtYWlsLmNvbSJ9.i5Xa_pclDm1Va7r8V6XYZdcAoOXkjvMbFSfeVVRttAc88VNAyFzNX8mwfQ4tYIjjrP1VymBDkWc7cyK04MmagBBsXgrLvujOvnK4T1vU1r3bmQPV3nagat0RuboWb4zJdQwKUZ5dDw4eGBHolz4YimieL-mv2I4XnN3wJrQ66EyQWrNB_14uhzd5yXdi05USMQGAN_hKxXBAKDxAORCxRy5j9q-c5_KsjjxOqY_OWOQyjiCZgQtz3a7W9DzSP5FlTa-RYcQzUqTc_dKKPNYTD-NLF48Mbuyt9LRG55jVhqN05ChkI8FmoFrpsmIHPp9uljct5zYMfOvEVZ7-O2Zvhw"
+					},
+					{
+						"key": "tenant-id",
+						"value": "1"
+					},
+					{
+						"key": "correlationId",
+						"value": "10001"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"token\": \"eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRmhiUXdURTZVNk0wc3lsUHFIWVZiWVV2NTFINHBFbEUtNXp2Nlp6T1VnIn0.eyJqdGkiOiI3MDQ1NWQ2Yi1jYmU1LTRiMTctOTg4MC0yMDY3YjU1ZDdkNmEiLCJleHAiOjE1ODc5OTQ1NTMsIm5iZiI6MCwiaWF0IjoxNTg3OTg4NTUzLCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOlsic3plbGxzLXJlYWxtIiwibWFzdGVyLXJlYWxtIiwiYWNjb3VudCJdLCJzdWIiOiI0NWQwNjBlMC01YzYxLTRhZTAtOThjZi0yZGIxNjQwNTIwYzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzemVsbHMtc2VydmVyIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiZTQ5ZDY4YzMtNWRiZC00NTQ4LTg2NjUtYmE5NjRkMjA1ZWNhIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImNyZWF0ZS1yZWFsbSIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InN6ZWxscy1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibWFzdGVyLXJlYWxtIjp7InJvbGVzIjpbInZpZXctcmVhbG0iLCJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsIm1hbmFnZS1pZGVudGl0eS1wcm92aWRlcnMiLCJpbXBlcnNvbmF0aW9uIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJhYmNkIGVmZyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFiY2RlZmciLCJnaXZlbl9uYW1lIjoiYWJjZCIsImZhbWlseV9uYW1lIjoiZWZnIiwibWVtYmVySWQiOiJhYmNkQGdtYWlsLmNvbSJ9.cTxhxP5OdlT3ykZIvNLFn2fzr5FyWBDwMYeHRJiqlFd3X0igs5RE3FrDn0bGcyM6oOK_SYIsRTMd3pJLAzozT39SZYKPkxaDywhxGSJgFiBl7OO3yoIWC3NIdTf2HwURgOJy5w1DNm-lzg8XAgSFZDixGzg05_4auiAy8LQXs0-c3LERjlw5IIDGcQU4ekybFgni1pI5WK7Qu7_OHsQrzUFcMV2pdq8Pd-WGt2_vR8U6W8IGOyBR_rFIRbG_A7xKMQsMykVegMEQr3bTSxgyVk82jL2QTPXZrGSwkD1noAAwz7gngT1fENmWwh6H5FiFOrPtJOnJid3PnuqZbLC1qg\",\n  \"clientId\" : \"szells-server\",\n  \"clientSecret\" : \"cef2c6e8-8ed6-4932-84b2-8789c176a9c3\"\n}"
+				},
+				"url": {
+					"raw": "http://18.223.195.84:9090/auth/introspect",
+					"protocol": "http",
+					"host": [
+						"18",
+						"223",
+						"195",
+						"84"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"introspect"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change Password after login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRmhiUXdURTZVNk0wc3lsUHFIWVZiWVV2NTFINHBFbEUtNXp2Nlp6T1VnIn0.eyJqdGkiOiI1NmU0ZjQ1NC0xZjQwLTRkNzYtYTg1Mi00MTM0Njk3NmZiNDciLCJleHAiOjE1ODc5NzYzMDYsIm5iZiI6MCwiaWF0IjoxNTg3OTcwMzA2LCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOlsic3plbGxzLXJlYWxtIiwibWFzdGVyLXJlYWxtIiwiYWNjb3VudCJdLCJzdWIiOiI0NWQwNjBlMC01YzYxLTRhZTAtOThjZi0yZGIxNjQwNTIwYzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzemVsbHMtc2VydmVyIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiMzkyOWU4ZmYtZjllMS00ZDAzLTg1ZjMtZmM5ZjRiYzgyNGQ5IiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImNyZWF0ZS1yZWFsbSIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InN6ZWxscy1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibWFzdGVyLXJlYWxtIjp7InJvbGVzIjpbInZpZXctcmVhbG0iLCJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsIm1hbmFnZS1pZGVudGl0eS1wcm92aWRlcnMiLCJpbXBlcnNvbmF0aW9uIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJhYmNkIGVmZyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFiY2RlZmciLCJnaXZlbl9uYW1lIjoiYWJjZCIsImZhbWlseV9uYW1lIjoiZWZnIiwibWVtYmVySWQiOiJhYmNkQGdtYWlsLmNvbSJ9.enUzCTE83IwiOVH7JVrcQfwqxEGUFhBaxaw4CHfNOLOcraSHEWUwXKbX4x_1wX0kRDLtjXzY7ySvJyITlKuAShIOQnWGmjz0cfrrXUDSzHpbusqUy0YBBcYVBaIz-Oe0BOwgfBFCmG1OxlL-0oomNlZl3_kuRB5lDg8aIBezKkzy8vST10ldEm9U--XEn1ynwmkVXJyQYw5omGVXsp3_u9wgT8I33y3Ux5QV-I1MyA4x8oNNa7yMnxVRiAl_t96KYEVsVpYGMzQBp7yGPwq7s-aHX8zN1kkYsIocMW1tqPhNffJi04Q-2oSFdiA0lulvWnpU2nVk21kcFGrsq_H1zg"
+					},
+					{
+						"key": "correlationId",
+						"value": "12"
+					},
+					{
+						"key": "X-Visibility-Scope-Key",
+						"value": "1"
+					},
+					{
+						"key": "tenant-id",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \n  \"memberId\":1,\n     \"password\":\"password123\"\n  \n}"
+				},
+				"url": {
+					"raw": "http://18.223.195.84:9090/auth/changepassword",
+					"protocol": "http",
+					"host": [
+						"18",
+						"223",
+						"195",
+						"84"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"changepassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset password",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRmhiUXdURTZVNk0wc3lsUHFIWVZiWVV2NTFINHBFbEUtNXp2Nlp6T1VnIn0.eyJqdGkiOiIxOTI1ODQ3Yy01N2E4LTQ3MTItOTczMC1jM2YxNjA4MGVlNTMiLCJleHAiOjE1ODc5MDE4NDUsIm5iZiI6MCwiaWF0IjoxNTg3ODk1ODQ1LCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOlsic3plbGxzLXJlYWxtIiwibWFzdGVyLXJlYWxtIiwiYWNjb3VudCJdLCJzdWIiOiI0NWQwNjBlMC01YzYxLTRhZTAtOThjZi0yZGIxNjQwNTIwYzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzemVsbHMtc2VydmVyIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiMzRjMjc4M2ItMDdiNS00NWM4LWIzNDktMmJjNGZhOGU1YTlkIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImNyZWF0ZS1yZWFsbSIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InN6ZWxscy1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibWFzdGVyLXJlYWxtIjp7InJvbGVzIjpbInZpZXctcmVhbG0iLCJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsIm1hbmFnZS1pZGVudGl0eS1wcm92aWRlcnMiLCJpbXBlcnNvbmF0aW9uIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJhYmNkIGVmZyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFiY2RlZmciLCJnaXZlbl9uYW1lIjoiYWJjZCIsImZhbWlseV9uYW1lIjoiZWZnIiwibWVtYmVySWQiOiJhYmNkQGdtYWlsLmNvbSJ9.b_tHyIalW5thArsLIKuXOyuIBTXgBnYla_hE4N8og9jdUSTLxoiv_gogc19s-SRxu9p5rla3Xx3P5QX8fiW8uaSmDTRzI6vnUntA39UUGYZUZzfjt6HHhQczKdOPutLY8Kv1kYSnYXyHuI_JMEupJv2Wi3B_ilhMMs-Er-chYbplD2ERc_nISxC-v3gjRCklrKvcWz6vgoT55bs2t4D-7rhnhXJH712KNf3NbsZXK1Eb4Hxuz5oa9EZi_qL-AXrEk4CJ7pwa948mO_3Fgvdox3VynPboTmdTQQg95xFFnqa7pKs2UaHgrfNpa4c9FPILHAp8v_SFlZHuy81b9R_FxA"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"type\": \"password\", \n  \"value\": \"12345678\", \n  \"temporary\": \"false\"\n  \n}\n"
+				},
+				"url": {
+					"raw": "http://ec2-18-191-199-237.us-east-2.compute.amazonaws.com:8080/auth/admin/realms/master/users/45d060e0-5c61-4ae0-98cf-2db1640520c8/reset-password",
+					"protocol": "http",
+					"host": [
+						"ec2-18-191-199-237",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"admin",
+						"realms",
+						"master",
+						"users",
+						"45d060e0-5c61-4ae0-98cf-2db1640520c8",
+						"reset-password"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Forgot Password API",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenant-id",
+						"value": "1"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "X-Visibility-Scope-Key",
+						"value": "2000"
+					},
+					{
+						"key": "correlationId",
+						"value": "10015"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"email\": \"jitendra@balajiinfosol.com\"\n\n}\n"
+				},
+				"url": {
+					"raw": "http://localhost:9090/auth/forgotpassword",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"forgotpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "keycloak user api",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRmhiUXdURTZVNk0wc3lsUHFIWVZiWVV2NTFINHBFbEUtNXp2Nlp6T1VnIn0.eyJqdGkiOiJlZDE1ZDRkMC02Y2YxLTQ3NGItYWMzMi1lZGViNmNmZGU5MDEiLCJleHAiOjE1ODgxODU4MjMsIm5iZiI6MCwiaWF0IjoxNTg4MTc5ODIzLCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJhY2NvdW50Iiwic3ViIjoiYjA3ZTFkZWQtMTM3My00ZDdkLWJkZjgtNzI2NTdiMjFmZDVmIiwidHlwIjoiQmVhcmVyIiwiYXpwIjoic3plbGxzLXNlcnZlciIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6IjRmNjVlNjNjLTcwZDktNDhmYS04ODRhLTRlYmFjMGI3Y2NkYSIsImFjciI6IjEiLCJhbGxvd2VkLW9yaWdpbnMiOlsiaHR0cDovL2xvY2FsaG9zdDo4MDgwIl0sInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJvZmZsaW5lX2FjY2VzcyIsInVtYV9hdXRob3JpemF0aW9uIl19LCJyZXNvdXJjZV9hY2Nlc3MiOnsiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIiwiZW1haWxfdmVyaWZpZWQiOmZhbHNlLCJwcmVmZXJyZWRfdXNlcm5hbWUiOiJyYW0xMjNAZ21haWwuY29tIn0.onDhy9fzBMpb3jCXw3o3uZMdFYvzI4hr9ekLWXdE_EoToEuvz4eGHbnYwYQGq5h8aYiIZS1GDZia7kjRjY0XZY9lNURAstFf_iyE_hRPVwnPr8Pd9ukDRTgTBoDiwLpABlaxZNU4mV5fxRUjtVdH9eeijtL_yuvqN1CrlAZ7m1_kV19WEIfNJfSq4peuPWBb6-2I9v2uX3uJq5QVM52z72OvLNLq3e4viw0ySDYSF5X3V8uRdFBM90B_LYlRCgi8qTlcFf9gHL2hq7wH2MFkfvu2-fm_kOP6bO5LcP8TgIfy-59ILPbN5CXVSyBTNWaPIGEca6ECxEyddf0hkDXFpw"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://ec2-18-191-199-237.us-east-2.compute.amazonaws.com:8080/auth/admin/master/console/whoami",
+					"protocol": "http",
+					"host": [
+						"ec2-18-191-199-237",
+						"us-east-2",
+						"compute",
+						"amazonaws",
+						"com"
+					],
+					"port": "8080",
+					"path": [
+						"auth",
+						"admin",
+						"master",
+						"console",
+						"whoami"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "tenant-id",
+						"value": "1"
+					},
+					{
+						"key": "x-correlation-id",
+						"value": "1001"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"username\" : \"arun@gmail.com\",\n  \"password\" : \"12345678\"\n}\n"
+				},
+				"url": {
+					"raw": "http://18.223.195.84:9090/auth/login",
+					"protocol": "http",
+					"host": [
+						"18",
+						"223",
+						"195",
+						"84"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Logout",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICJuRmhiUXdURTZVNk0wc3lsUHFIWVZiWVV2NTFINHBFbEUtNXp2Nlp6T1VnIn0.eyJqdGkiOiI3MDQ1NWQ2Yi1jYmU1LTRiMTctOTg4MC0yMDY3YjU1ZDdkNmEiLCJleHAiOjE1ODc5OTQ1NTMsIm5iZiI6MCwiaWF0IjoxNTg3OTg4NTUzLCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOlsic3plbGxzLXJlYWxtIiwibWFzdGVyLXJlYWxtIiwiYWNjb3VudCJdLCJzdWIiOiI0NWQwNjBlMC01YzYxLTRhZTAtOThjZi0yZGIxNjQwNTIwYzgiLCJ0eXAiOiJCZWFyZXIiLCJhenAiOiJzemVsbHMtc2VydmVyIiwiYXV0aF90aW1lIjowLCJzZXNzaW9uX3N0YXRlIjoiZTQ5ZDY4YzMtNWRiZC00NTQ4LTg2NjUtYmE5NjRkMjA1ZWNhIiwiYWNyIjoiMSIsImFsbG93ZWQtb3JpZ2lucyI6WyJodHRwOi8vbG9jYWxob3N0OjgwODAiXSwicmVhbG1fYWNjZXNzIjp7InJvbGVzIjpbImNyZWF0ZS1yZWFsbSIsIm9mZmxpbmVfYWNjZXNzIiwiYWRtaW4iLCJ1bWFfYXV0aG9yaXphdGlvbiJdfSwicmVzb3VyY2VfYWNjZXNzIjp7InN6ZWxscy1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwibWFzdGVyLXJlYWxtIjp7InJvbGVzIjpbInZpZXctcmVhbG0iLCJ2aWV3LWlkZW50aXR5LXByb3ZpZGVycyIsIm1hbmFnZS1pZGVudGl0eS1wcm92aWRlcnMiLCJpbXBlcnNvbmF0aW9uIiwiY3JlYXRlLWNsaWVudCIsIm1hbmFnZS11c2VycyIsInF1ZXJ5LXJlYWxtcyIsInZpZXctYXV0aG9yaXphdGlvbiIsInF1ZXJ5LWNsaWVudHMiLCJxdWVyeS11c2VycyIsIm1hbmFnZS1ldmVudHMiLCJtYW5hZ2UtcmVhbG0iLCJ2aWV3LWV2ZW50cyIsInZpZXctdXNlcnMiLCJ2aWV3LWNsaWVudHMiLCJtYW5hZ2UtYXV0aG9yaXphdGlvbiIsIm1hbmFnZS1jbGllbnRzIiwicXVlcnktZ3JvdXBzIl19LCJhY2NvdW50Ijp7InJvbGVzIjpbIm1hbmFnZS1hY2NvdW50IiwibWFuYWdlLWFjY291bnQtbGlua3MiLCJ2aWV3LXByb2ZpbGUiXX19LCJzY29wZSI6InByb2ZpbGUgZW1haWwiLCJlbWFpbF92ZXJpZmllZCI6ZmFsc2UsIm5hbWUiOiJhYmNkIGVmZyIsInByZWZlcnJlZF91c2VybmFtZSI6ImFiY2RlZmciLCJnaXZlbl9uYW1lIjoiYWJjZCIsImZhbWlseV9uYW1lIjoiZWZnIiwibWVtYmVySWQiOiJhYmNkQGdtYWlsLmNvbSJ9.cTxhxP5OdlT3ykZIvNLFn2fzr5FyWBDwMYeHRJiqlFd3X0igs5RE3FrDn0bGcyM6oOK_SYIsRTMd3pJLAzozT39SZYKPkxaDywhxGSJgFiBl7OO3yoIWC3NIdTf2HwURgOJy5w1DNm-lzg8XAgSFZDixGzg05_4auiAy8LQXs0-c3LERjlw5IIDGcQU4ekybFgni1pI5WK7Qu7_OHsQrzUFcMV2pdq8Pd-WGt2_vR8U6W8IGOyBR_rFIRbG_A7xKMQsMykVegMEQr3bTSxgyVk82jL2QTPXZrGSwkD1noAAwz7gngT1fENmWwh6H5FiFOrPtJOnJid3PnuqZbLC1qg"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "tenant-id",
+						"value": "1"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n     \"refreshToken\": \"eyJhbGciOiJIUzI1NiIsInR5cCIgOiAiSldUIiwia2lkIiA6ICIwOTI3NWYzNy1iOGFlLTQ0OGUtOGJjMi1kYTI1NzA3Y2MxZGYifQ.eyJqdGkiOiJkMDVkNGFmZC0xNjA0LTQ5NGYtYjRjMy1lYzYyNjJkNzk2N2YiLCJleHAiOjE1ODc5OTAzNTMsIm5iZiI6MCwiaWF0IjoxNTg3OTg4NTUzLCJpc3MiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJhdWQiOiJodHRwOi8vZWMyLTE4LTE5MS0xOTktMjM3LnVzLWVhc3QtMi5jb21wdXRlLmFtYXpvbmF3cy5jb206ODA4MC9hdXRoL3JlYWxtcy9tYXN0ZXIiLCJzdWIiOiI0NWQwNjBlMC01YzYxLTRhZTAtOThjZi0yZGIxNjQwNTIwYzgiLCJ0eXAiOiJSZWZyZXNoIiwiYXpwIjoic3plbGxzLXNlcnZlciIsImF1dGhfdGltZSI6MCwic2Vzc2lvbl9zdGF0ZSI6ImU0OWQ2OGMzLTVkYmQtNDU0OC04NjY1LWJhOTY0ZDIwNWVjYSIsInJlYWxtX2FjY2VzcyI6eyJyb2xlcyI6WyJjcmVhdGUtcmVhbG0iLCJvZmZsaW5lX2FjY2VzcyIsImFkbWluIiwidW1hX2F1dGhvcml6YXRpb24iXX0sInJlc291cmNlX2FjY2VzcyI6eyJzemVsbHMtcmVhbG0iOnsicm9sZXMiOlsidmlldy1yZWFsbSIsInZpZXctaWRlbnRpdHktcHJvdmlkZXJzIiwibWFuYWdlLWlkZW50aXR5LXByb3ZpZGVycyIsImltcGVyc29uYXRpb24iLCJjcmVhdGUtY2xpZW50IiwibWFuYWdlLXVzZXJzIiwicXVlcnktcmVhbG1zIiwidmlldy1hdXRob3JpemF0aW9uIiwicXVlcnktY2xpZW50cyIsInF1ZXJ5LXVzZXJzIiwibWFuYWdlLWV2ZW50cyIsIm1hbmFnZS1yZWFsbSIsInZpZXctZXZlbnRzIiwidmlldy11c2VycyIsInZpZXctY2xpZW50cyIsIm1hbmFnZS1hdXRob3JpemF0aW9uIiwibWFuYWdlLWNsaWVudHMiLCJxdWVyeS1ncm91cHMiXX0sIm1hc3Rlci1yZWFsbSI6eyJyb2xlcyI6WyJ2aWV3LXJlYWxtIiwidmlldy1pZGVudGl0eS1wcm92aWRlcnMiLCJtYW5hZ2UtaWRlbnRpdHktcHJvdmlkZXJzIiwiaW1wZXJzb25hdGlvbiIsImNyZWF0ZS1jbGllbnQiLCJtYW5hZ2UtdXNlcnMiLCJxdWVyeS1yZWFsbXMiLCJ2aWV3LWF1dGhvcml6YXRpb24iLCJxdWVyeS1jbGllbnRzIiwicXVlcnktdXNlcnMiLCJtYW5hZ2UtZXZlbnRzIiwibWFuYWdlLXJlYWxtIiwidmlldy1ldmVudHMiLCJ2aWV3LXVzZXJzIiwidmlldy1jbGllbnRzIiwibWFuYWdlLWF1dGhvcml6YXRpb24iLCJtYW5hZ2UtY2xpZW50cyIsInF1ZXJ5LWdyb3VwcyJdfSwiYWNjb3VudCI6eyJyb2xlcyI6WyJtYW5hZ2UtYWNjb3VudCIsIm1hbmFnZS1hY2NvdW50LWxpbmtzIiwidmlldy1wcm9maWxlIl19fSwic2NvcGUiOiJwcm9maWxlIGVtYWlsIn0.ha82hEnxpG_fpwwRfgOuIuE3uxURq5hR5TrwDwT396Q\"\n}\n\n\n\n\n\n"
+				},
+				"url": {
+					"raw": "http://18.223.195.84:9090/auth/invalidate",
+					"protocol": "http",
+					"host": [
+						"18",
+						"223",
+						"195",
+						"84"
+					],
+					"port": "9090",
+					"path": [
+						"auth",
+						"invalidate"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

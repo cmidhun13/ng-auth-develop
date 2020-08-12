@@ -1,0 +1,56 @@
+server:
+  port: 9090
+
+spring:
+  datasource:
+    url: jdbc:postgresql://ruleengine.cyglulrs2sd6.us-east-2.rds.amazonaws.com:5432/member
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+  autoconfigure:
+    exclude: org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration
+auth:
+  mail:
+    SMTP_USERNAME: AKIA4DYGT4Q7F7QPCF3Y
+    SMTP_PASSWORD: BMz+dvWfVQXLtrXh8vG9aL98ecIsnkGQhj4Lb4DUGEaP
+    HOST: email-smtp.us-east-1.amazonaws.com
+    PORT: 587
+    FROMNAME: Szells
+    FROM: dev.worthy1@gmail.com
+
+gce:
+  tenant-realm-mapping:
+    1: master
+    2: natwest
+    3: ulster-ri
+    4: ulster-ni
+
+oauth2:
+  client-id: szells-server
+  client-secret: cef2c6e8-8ed6-4932-84b2-8789c176a9c3
+  auth-server-base-url: http://ec2-18-191-199-237.us-east-2.compute.amazonaws.com:8080/auth
+
+#rest.security.enabled: true
+#rest.security.cors.allowed-origins: '*'
+#rest.security.cors.allowed-headers: '*'
+#rest.security.cors.allowed-methods: GET,POST,PUT,PATCH,DELETE,OPTIONS
+#rest.security.cors.max-age: 3600
+
+
+member-fetch-token: http://18.223.195.84:9001/core/client/fetchToken
+forgot-email:  http://18.223.195.84:9001/core/auth/forgotemail
+forgot-password:  http://18.223.195.84:9001/core/auth/forgotpassword
+create-update-member: http://18.223.195.84:8025/core/members/v2/createOrUpdate
+forgot-password-hash: http://18.223.195.84:8025/core/members/v2/updateHash
+update-customer: http://3.15.40.28:8081/v1/customer/update/userId
+#update-customer: http://localhost:8081/v1/customer/update/userId
+customerService:
+  url: http://3.15.40.28:8080
+  getCustomer: /api/v1/customersWithoutAuth
+
+logging:
+  level:
+    root: DEBUG
+    org:
+      springframework:
+        data: TRACE

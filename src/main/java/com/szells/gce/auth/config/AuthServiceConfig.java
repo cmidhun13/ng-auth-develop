@@ -51,7 +51,7 @@ public class AuthServiceConfig {
         return Optional.of(restTemplate().exchange(authTokenUri, POST, request, TokenResponse.class))
                 .map(HttpEntity::getBody)
                 .map(TokenResponse::getAccessToken)
-                .orElseThrow(() -> new AuthServiceException(ACCESS_TOKEN_ACQUIRE_FAILED.getCode()));
+                .orElseThrow(() -> new AuthServiceException(ACCESS_TOKEN_ACQUIRE_FAILED.getCode(),""));
     }
 
     private ClientTokenRequest getClientTokenRequest() {

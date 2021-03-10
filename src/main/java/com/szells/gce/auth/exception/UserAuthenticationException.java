@@ -8,8 +8,8 @@ import lombok.Setter;
 public class UserAuthenticationException extends AuthServiceException {
     private Integer failCount;
 
-    public UserAuthenticationException(String code, Integer failCount, String... additionalParams) {
-        super(code, additionalParams);
+    public UserAuthenticationException(String code, String message,Integer failCount, String... additionalParams) {
+        super(code,message, additionalParams);
         this.failCount = failCount;
     }
 }

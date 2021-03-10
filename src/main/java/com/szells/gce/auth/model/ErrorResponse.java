@@ -19,5 +19,7 @@ public class ErrorResponse {
 
     private String context;
 
+    private String message;
+
 //    private List<Error> errors;
 }

@@ -73,6 +73,7 @@ public class RestExceptionHandler {
         logExceptionDetails(request, ex, error.getMessage());
         return ErrorResponse.builder()
                 .context("Server Error")
+                .message(ex.getMessage())
                 .build();
     }
 

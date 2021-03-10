@@ -7,7 +7,7 @@ import lombok.Setter;
 @Setter
 public class HttpHeaderException extends AuthServiceException {
 
-    public HttpHeaderException(String code, String... additionalParams) {
-        super(code, additionalParams);
+    public HttpHeaderException(String code,String message, String... additionalParams) {
+        super(code,message, additionalParams);
     }
 }

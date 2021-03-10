@@ -1,6 +1,7 @@
 package com.szells.gce.auth.service;
 
 import com.szells.gce.auth.client.AuthClient;
+import com.szells.gce.auth.config.OAuth2ClientProperties;
 import com.szells.gce.auth.domain.Member;
 import com.szells.gce.auth.exception.AuthServiceException;
 import com.szells.gce.auth.model.request.*;
@@ -9,16 +10,19 @@ import com.szells.gce.auth.util.RequestGenerator;
 import com.szells.gce.auth.util.SuccessLogDetails;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.http.conn.HttpHostConnectException;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.*;
 import org.springframework.stereotype.Component;
 import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
 import org.springframework.web.client.HttpClientErrorException;
+import org.springframework.web.client.ResourceAccessException;
 import org.springframework.web.client.RestTemplate;
 
 import java.net.URI;
 import java.util.LinkedHashMap;
+import java.util.Objects;
 import java.util.Optional;
 import java.util.UUID;
 
@@ -39,6 +43,10 @@ public class UserAuthenticationService {
     private  String customerServiceUrl;
     @Value("${customerService.getCustomer}")
     private  String getCustomerUrl;
+   /* @Value("${oauth2.client-id}")
+    private  String clientId;
+    @Value("${oauth2.client-secret}")
+    private  String clientSecret;*/
 
     private final RequestGenerator requestGenerator;
 
@@ -58,6 +66,8 @@ public class UserAuthenticationService {
 
     @Value("${forgot-password-hash}")
     private String generateHashCodeURL;
+
+    private final OAuth2ClientProperties oAuth2ClientProperties;
 
 
     public String resetPasswordForUser(ChangePasswordRequest changePasswordRequest, String tenantId) {
@@ -131,17 +141,17 @@ public class UserAuthenticationService {
     public GenericResponse generateTokenForUser(UserTokenRequest tokenRequest, String tenantId) {
         URI clientTokenUri = requestGenerator.generateForFetchToken();
         URI authTokenUri = requestGenerator.generateURI(GENERATE_TOKEN_ENDPOINT, tenantId);
+        TokenResponse tokenResponse ;
 
-        try {
-            ClientTokenResponse clientTokenResponse = authClient.invoke(clientTokenUri, GET, null, ClientTokenResponse.class);
-            tokenRequest.setClientId(clientTokenResponse.getClientId());
-            tokenRequest.setClientSecret(clientTokenResponse.getClientSecret());
+            tokenRequest.setClientId(oAuth2ClientProperties.getClientId());
+            tokenRequest.setClientSecret(oAuth2ClientProperties.getClientSecret());
+
 
             HttpEntity<MultiValueMap<String, String>> request = requestGenerator.generateUserTokenRequest(tokenRequest);
-            TokenResponse tokenResponse = authClient.invoke(authTokenUri, POST, request, TokenResponse.class);
+            tokenResponse = authClient.invoke(authTokenUri, POST, request, TokenResponse.class);
             String accessToken = Optional.ofNullable(tokenResponse)
                     .map(TokenResponse::getAccessToken)
-                    .orElseThrow(() -> new AuthServiceException(ACCESS_TOKEN_ACQUIRE_FAILED.getCode()));
+                    .orElseThrow(() -> new AuthServiceException(ACCESS_TOKEN_ACQUIRE_FAILED.getCode(),""));
 
 
             ValidateTokenResponse claims = validateToken(tokenRequest, tenantId, accessToken);
@@ -159,22 +169,17 @@ public class UserAuthenticationService {
 System.out.println(s);  //Gives the member id in case , value is there.. if not, it gives null.. TODO : if null, then take the tokenRequest.getUserName() and this keycloakUserId to member listener and do insertion to the member_user table. You can get member id frmo member table based on the email
 */
 
-            return new GenericResponse(true, HttpStatus.OK.value(), "Login Successful", null, tokenResponse);
-        } catch (HttpClientErrorException ex) {
-            //return new GenericResponse(false, ex.getStatusCode().value(), "Login Failed" , null, ex.getMessage());
-            return new GenericResponse(false, ex.getStatusCode().value(), "Please enter the correct email ID or password.", null, new LoginError(String.valueOf(ex.getStatusCode().value() + " " + ex.getStatusText())));
-        }
+
+
+        return new GenericResponse(true, HttpStatus.OK.value(), "Login Successful", null, tokenResponse);
     }
 
     private ValidateTokenResponse validateToken(UserTokenRequest tokenRequest, String tenantId, String token) {
         System.out.println(tokenRequest.getClientId());
         System.out.println("am here");
         if (tokenRequest.getClientId().isEmpty() || tokenRequest.getClientId() != null) {
-            URI clientTokenUri = requestGenerator.generateForFetchToken();
-
-            ClientTokenResponse clientTokenResponse = authClient.invoke(clientTokenUri, GET, null, ClientTokenResponse.class);
-            tokenRequest.setClientId(clientTokenResponse.getClientId());
-            tokenRequest.setClientSecret(clientTokenResponse.getClientSecret());
+            tokenRequest.setClientId(oAuth2ClientProperties.getClientId());
+            tokenRequest.setClientSecret(oAuth2ClientProperties.getClientSecret());
         }
         ValidateTokenRequest validateTokenRequest = ValidateTokenRequest.builder()
                 .token(token)

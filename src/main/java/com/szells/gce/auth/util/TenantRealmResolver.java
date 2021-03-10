@@ -32,6 +32,6 @@ public class TenantRealmResolver {
 //        coreLogger.log("relam rosolver trace", Level.INFO, successLogDetails.getLogDetails(List.of("userName", "password"), "tenaneId", tenantId));
         return Optional.ofNullable(tenantRealmMapping)
                 .map(mapper -> mapper.get(tenantId))
-                .orElseThrow(() -> new AuthServiceException(TENANT_REALM_MAPPING_NOT_FOUND.getCode()));
+                .orElseThrow(() -> new AuthServiceException(TENANT_REALM_MAPPING_NOT_FOUND.getCode(),""));
     }
 }

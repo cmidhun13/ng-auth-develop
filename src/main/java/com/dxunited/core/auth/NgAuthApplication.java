@@ -7,7 +7,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 
 
 @SpringBootApplication
-@ComponentScan(basePackages = {"com.szells"})
+@ComponentScan(basePackages = {"com.dxunited"})
 @EnableAsync
 public class NgAuthApplication {
 

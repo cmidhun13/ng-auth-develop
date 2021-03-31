@@ -31,11 +31,19 @@ This library consists of code that is common across all services.
 | token validate| POST| /auth/introspect| AuthController|
 | Password reset from mail| POST| auth/resetpassword| AuthController|
 | Create user in keycloak| POST| /auth/Create| AuthController|
+| Token generate | POST| /auth/token| AuthController|
 
 ## Steps to Run an application
 1. Take the latest copy of the code from the repository
 2. Open project.
 3. build the project using Gradle-><<Project>>->Tasks->build->build.
 4. Once Project get build successfully, press Shift+F10 to run it.
+
+##Sample endpoint call
+/auth/token
+1. Pass clientId and clientSecret in the request json body
+2. Choose Http request type as : POST
+3. Pass tenant-id and correlationId headers with appropriate values
+4. New token will be generated with time to live details
 
 

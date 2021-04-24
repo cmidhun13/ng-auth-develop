@@ -3,7 +3,16 @@ plugins {
     id 'io.spring.dependency-management' version '1.0.8.RELEASE'
     id 'java'
     id "org.owasp.dependencycheck" version "5.0.0"
-    id "org.sonarqube" version "2.8"
+    //id "org.sonarqube" version "2.8"
+    //Devops code start
+    id 'pl.allegro.tech.build.axion-release' version '1.12.0'
+    id 'com.palantir.docker' version '0.25.0'
+    id 'com.palantir.docker-run' version '0.25.0'
+    id 'jp.classmethod.aws.cloudformation' version '0.41'
+    id 'com.palantir.docker-compose' version '0.22.1'
+    id 'jacoco'
+    id 'org.sonarqube' version '3.0'
+    //Devops code end
 }
 
 apply plugin: 'maven-publish'
@@ -24,6 +33,9 @@ configurations {
 repositories {
 //     mavenLocal()
     mavenCentral()
+    //devops code start
+    jcenter()
+    //devops code End
 }
 
 
@@ -69,11 +81,40 @@ dependencies {
 
     compileOnly 'org.projectlombok:lombok'
 
-    annotationProcessor 'org.projectlombok:lombok'
-
+    //annotationProcessor 'org.projectlombok:lombok'
+    //Devops code starts here
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    //Devops code ends here
     testCompileOnly 'junit:junit:4.12'
 
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
     testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
     testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
 }
+
+// Devops code start//
+String dockerHubUsernameProperty = findProperty('dockerHubUsername') ?: 'cmidhun'
+String imageName = "${dockerHubUsernameProperty}/ng-auth:$version"
+
+docker {
+    name imageName
+    files "build/libs/${bootJar.archiveFileName.get()}"
+    buildArgs([JAR_FILE: bootJar.archiveFileName.get()])
+}
+
+dockerRun {
+    name project.name
+    image imageName
+    ports '8080:8080'
+    clean true
+}
+
+sonarqube {
+    properties {
+        property 'sonar.host.url', 'http://localhost:9000'
+    }
+}
+
+tasks['sonarqube'].dependsOn test
+
+// Devops code end//

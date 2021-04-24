@@ -1,20 +1,25 @@
-# Start with a base image containing Java runtime 
-FROM openjdk:11-jre-slim
+FROM openjdk:11
+ARG JAR_FILE
+COPY ${JAR_FILE} app.jar
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+
+## Start with a base image containing Java runtime
+#FROM openjdk:11-jre-slim
  
-# Add Maintainer Info 
-LABEL maintainer="akhan@szellsgroup.com,simore@szellsgroup.com"
+## Add Maintainer Info
+#LABEL maintainer="akhan@szellsgroup.com,simore@szellsgroup.com"
  
-# Add a volume pointing to /tmp 
-VOLUME /tmp 
+## Add a volume pointing to /tmp
+#VOLUME /tmp
  
-# Make port 8061 available to the world outside this container 
-EXPOSE 8061 
+## Make port 8061 available to the world outside this container
+#EXPOSE 8061
  
-# The application's jar file 
-ARG JAR_FILE=./build/libs/ng-auth-0.0.1-SNAPSHOT.jar
+## The application's jar file
+#ARG JAR_FILE=./build/libs/ng-auth-0.0.1-SNAPSHOT.jar
  
-# Add the application's jar to the container 
-ADD ${JAR_FILE} ng-auth.jar 
+## Add the application's jar to the container
+#ADD ${JAR_FILE} ng-auth.jar
  
-# Run the jar file 
-ENTRYPOINT ["java","-Dserver.port=8061","-Djava.security.egd=file:/dev/./urandom","-jar","/ng-auth.jar"]
+## Run the jar file
+#ENTRYPOINT ["java","-Dserver.port=8061","-Djava.security.egd=file:/dev/./urandom","-jar","/ng-auth.jar"]

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -21,9 +24,10 @@
   <component name="ChangeListManager">
     <list default="true" id="a5761834-69b4-447e-bee1-191f5250b29a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +52,41 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ng-auth" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ng-auth" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ng-auth" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="application" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ng-auth" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ng-auth" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build setup" type="c8890929:TasksNode$1" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="ng-auth" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="documentation" type="c8890929:TasksNode$1" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -77,6 +115,9 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="settings.saveactions" />
     <property name="show.unlinked.gradle.project.popup" value="true" />
   </component>
@@ -91,7 +132,7 @@
       <recent name="$PROJECT_DIR$/src/main/java/com/cxloyalty/gce/auth/controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.NgAuthApplication (1)">
+  <component name="RunManager" selected="Gradle.ng-auth-develop [bootRun]">
     <configuration name="NgAuthApplication (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.szells.gce.auth.NgAuthApplication" />
       <module name="ng-auth.main" />
@@ -104,6 +145,27 @@
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="ng-auth-develop [bootRun]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="bootRun" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
     </configuration>
     <configuration name="ng-auth-develop [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
@@ -121,20 +183,48 @@
         </option>
         <option name="vmOptions" value="" />
       </ExternalSystemSettings>
-      <GradleScriptDebugEnabled>true</GradleScriptDebugEnabled>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="ng-auth-develop [jar]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="jar" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
     <list>
       <item itemvalue="Application.NgAuthApplication (1)" />
       <item itemvalue="Gradle.ng-auth-develop [build]" />
+      <item itemvalue="Gradle.ng-auth-develop [bootRun]" />
+      <item itemvalue="Gradle.ng-auth-develop [jar]" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.NgAuthApplication (1)" />
+        <item itemvalue="Gradle.ng-auth-develop [bootRun]" />
         <item itemvalue="Gradle.ng-auth-develop [build]" />
+        <item itemvalue="Gradle.ng-auth-develop [jar]" />
+        <item itemvalue="Application.NgAuthApplication (1)" />
       </list>
     </recent_temporary>
   </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -171,151 +261,6 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Updated method name" />
     <option name="LAST_COMMIT_MESSAGE" value="Updated method name" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1589950170299">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="184" y="112" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1440.900@0.0.1440.900" timestamp="1589950170299" />
-    <state x="421" y="31" key="#ng-auth-develop_[build]" timestamp="1588769151338">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="421" y="31" key="#ng-auth-develop_[build]/0.0.1440.900@0.0.1440.900" timestamp="1588769151338" />
-    <state x="483" y="74" key="#xdebugger.evaluate" timestamp="1590382946178">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="483" y="74" key="#xdebugger.evaluate/0.0.1440.900@0.0.1440.900" timestamp="1590382946178" />
-    <state width="536" height="641" key="DebuggerActiveHint" timestamp="1590383026853">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="536" height="641" key="DebuggerActiveHint/0.0.1440.900@0.0.1440.900" timestamp="1590383026853" />
-    <state width="536" height="641" key="DebuggerActiveHint/0.23.1440.797@0.23.1440.797" timestamp="1590382432483" />
-    <state width="536" height="641" key="DebuggerActiveHint/0.23.1440.801@0.23.1440.801" timestamp="1590025868992" />
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.0.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590385515588" />
-    <state width="1398" height="387" key="GridCell.Tab.0.bottom/0.23.1440.797@0.23.1440.797" timestamp="1590381520036" />
-    <state width="1398" height="215" key="GridCell.Tab.0.bottom/0.23.1440.798@0.23.1440.798" timestamp="1589949954278" />
-    <state width="1398" height="387" key="GridCell.Tab.0.bottom/0.23.1440.801@0.23.1440.801" timestamp="1590026803426" />
-    <state width="1398" height="387" key="GridCell.Tab.0.bottom/0.23.1440.804@0.23.1440.804" timestamp="1590112901236" />
-    <state width="1878" height="502" key="GridCell.Tab.0.bottom/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222788" />
-    <state width="1878" height="502" key="GridCell.Tab.0.bottom/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008851" />
-    <state width="1323" height="223" key="GridCell.Tab.0.center" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.center/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.0.center/0.0.1440.900@0.0.1440.900" timestamp="1590385515585" />
-    <state width="1398" height="387" key="GridCell.Tab.0.center/0.23.1440.797@0.23.1440.797" timestamp="1590381520026" />
-    <state width="1398" height="215" key="GridCell.Tab.0.center/0.23.1440.798@0.23.1440.798" timestamp="1589949954276" />
-    <state width="1398" height="387" key="GridCell.Tab.0.center/0.23.1440.801@0.23.1440.801" timestamp="1590026803424" />
-    <state width="1398" height="387" key="GridCell.Tab.0.center/0.23.1440.804@0.23.1440.804" timestamp="1590112901232" />
-    <state width="1878" height="502" key="GridCell.Tab.0.center/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222784" />
-    <state width="1878" height="502" key="GridCell.Tab.0.center/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008846" />
-    <state width="1323" height="223" key="GridCell.Tab.0.left" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.left/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.0.left/0.0.1440.900@0.0.1440.900" timestamp="1590385515582" />
-    <state width="1398" height="387" key="GridCell.Tab.0.left/0.23.1440.797@0.23.1440.797" timestamp="1590381519991" />
-    <state width="1398" height="215" key="GridCell.Tab.0.left/0.23.1440.798@0.23.1440.798" timestamp="1589949954275" />
-    <state width="1398" height="387" key="GridCell.Tab.0.left/0.23.1440.801@0.23.1440.801" timestamp="1590026803422" />
-    <state width="1398" height="387" key="GridCell.Tab.0.left/0.23.1440.804@0.23.1440.804" timestamp="1590112901229" />
-    <state width="1878" height="502" key="GridCell.Tab.0.left/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222781" />
-    <state width="1878" height="502" key="GridCell.Tab.0.left/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008844" />
-    <state width="1323" height="223" key="GridCell.Tab.0.right" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.0.right/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.0.right/0.0.1440.900@0.0.1440.900" timestamp="1590385515586" />
-    <state width="1398" height="387" key="GridCell.Tab.0.right/0.23.1440.797@0.23.1440.797" timestamp="1590381520034" />
-    <state width="1398" height="215" key="GridCell.Tab.0.right/0.23.1440.798@0.23.1440.798" timestamp="1589949954277" />
-    <state width="1398" height="387" key="GridCell.Tab.0.right/0.23.1440.801@0.23.1440.801" timestamp="1590026803425" />
-    <state width="1398" height="387" key="GridCell.Tab.0.right/0.23.1440.804@0.23.1440.804" timestamp="1590112901234" />
-    <state width="1878" height="502" key="GridCell.Tab.0.right/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222786" />
-    <state width="1878" height="502" key="GridCell.Tab.0.right/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008848" />
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.bottom/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.1.bottom/0.0.1440.900@0.0.1440.900" timestamp="1590385515595" />
-    <state width="1398" height="387" key="GridCell.Tab.1.bottom/0.23.1440.797@0.23.1440.797" timestamp="1590381520075" />
-    <state width="1398" height="215" key="GridCell.Tab.1.bottom/0.23.1440.798@0.23.1440.798" timestamp="1589949954281" />
-    <state width="1398" height="387" key="GridCell.Tab.1.bottom/0.23.1440.801@0.23.1440.801" timestamp="1590026803430" />
-    <state width="1398" height="387" key="GridCell.Tab.1.bottom/0.23.1440.804@0.23.1440.804" timestamp="1590112901243" />
-    <state width="1878" height="502" key="GridCell.Tab.1.bottom/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222795" />
-    <state width="1878" height="502" key="GridCell.Tab.1.bottom/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008398" />
-    <state width="1323" height="223" key="GridCell.Tab.1.center" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.center/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.1.center/0.0.1440.900@0.0.1440.900" timestamp="1590385515591" />
-    <state width="1398" height="387" key="GridCell.Tab.1.center/0.23.1440.797@0.23.1440.797" timestamp="1590381520040" />
-    <state width="1398" height="215" key="GridCell.Tab.1.center/0.23.1440.798@0.23.1440.798" timestamp="1589949954279" />
-    <state width="1398" height="387" key="GridCell.Tab.1.center/0.23.1440.801@0.23.1440.801" timestamp="1590026803428" />
-    <state width="1398" height="387" key="GridCell.Tab.1.center/0.23.1440.804@0.23.1440.804" timestamp="1590112901239" />
-    <state width="1878" height="502" key="GridCell.Tab.1.center/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222791" />
-    <state width="1878" height="502" key="GridCell.Tab.1.center/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008392" />
-    <state width="1323" height="223" key="GridCell.Tab.1.left" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.left/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.1.left/0.0.1440.900@0.0.1440.900" timestamp="1590385515589" />
-    <state width="1398" height="387" key="GridCell.Tab.1.left/0.23.1440.797@0.23.1440.797" timestamp="1590381520039" />
-    <state width="1398" height="215" key="GridCell.Tab.1.left/0.23.1440.798@0.23.1440.798" timestamp="1589949954278" />
-    <state width="1398" height="387" key="GridCell.Tab.1.left/0.23.1440.801@0.23.1440.801" timestamp="1590026803427" />
-    <state width="1398" height="387" key="GridCell.Tab.1.left/0.23.1440.804@0.23.1440.804" timestamp="1590112901238" />
-    <state width="1878" height="502" key="GridCell.Tab.1.left/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222790" />
-    <state width="1878" height="502" key="GridCell.Tab.1.left/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008389" />
-    <state width="1323" height="223" key="GridCell.Tab.1.right" timestamp="1597209877612">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state width="1323" height="223" key="GridCell.Tab.1.right/0.0.1366.728@0.0.1366.728" timestamp="1597209877612" />
-    <state width="1398" height="299" key="GridCell.Tab.1.right/0.0.1440.900@0.0.1440.900" timestamp="1590385515593" />
-    <state width="1398" height="387" key="GridCell.Tab.1.right/0.23.1440.797@0.23.1440.797" timestamp="1590381520074" />
-    <state width="1398" height="215" key="GridCell.Tab.1.right/0.23.1440.798@0.23.1440.798" timestamp="1589949954280" />
-    <state width="1398" height="387" key="GridCell.Tab.1.right/0.23.1440.801@0.23.1440.801" timestamp="1590026803429" />
-    <state width="1398" height="387" key="GridCell.Tab.1.right/0.23.1440.804@0.23.1440.804" timestamp="1590112901241" />
-    <state width="1878" height="502" key="GridCell.Tab.1.right/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589942222793" />
-    <state width="1878" height="502" key="GridCell.Tab.1.right/1440.-35.1920.1080/0.23.1440.797@1440.-35.1920.1080" timestamp="1589939008395" />
-    <state x="450" y="200" width="540" height="540" key="StructurePopup" timestamp="1588898151795">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="450" y="200" width="540" height="540" key="StructurePopup/0.0.1440.900@0.0.1440.900" timestamp="1588898151795" />
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2" timestamp="1596721986797">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="275" y="97" key="Vcs.Push.Dialog.v2/0.0.1366.728@0.0.1366.728" timestamp="1596721986797" />
-    <state width="720" height="450" key="XDebugger.FullValuePopup" timestamp="1590383026813">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="720" height="450" key="XDebugger.FullValuePopup/0.0.1440.900@0.0.1440.900" timestamp="1590383026813" />
-    <state width="720" height="450" key="XDebugger.FullValuePopup/0.23.1440.797@0.23.1440.797" timestamp="1590382432469" />
-    <state width="720" height="450" key="XDebugger.FullValuePopup/0.23.1440.801@0.23.1440.801" timestamp="1590025763346" />
-    <state x="427" y="192" width="586" height="522" key="find.popup" timestamp="1590459866740">
-      <screen x="0" y="23" width="1440" height="798" />
-    </state>
-    <state x="427" y="191" width="586" height="580" key="find.popup/0.0.1440.900@0.0.1440.900" timestamp="1590380097943" />
-    <state x="427" y="192" width="586" height="522" key="find.popup/0.23.1440.798@0.23.1440.798" timestamp="1590459866740" />
-    <state x="2009" y="194" width="782" height="696" key="find.popup/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589937616351" />
-    <state x="323" y="152" key="git4idea.merge.GitPullDialog" timestamp="1597209346798">
-      <screen x="0" y="0" width="1366" height="728" />
-    </state>
-    <state x="323" y="152" key="git4idea.merge.GitPullDialog/0.0.1366.728@0.0.1366.728" timestamp="1597209346798" />
-    <state width="600" height="440" key="javadoc.popup" timestamp="1588649300964">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state width="600" height="440" key="javadoc.popup/0.0.1440.900@0.0.1440.900" timestamp="1588649300964" />
-    <state x="385" y="210" key="run.anything.popup" timestamp="1590025720275">
-      <screen x="0" y="23" width="1440" height="801" />
-    </state>
-    <state x="385" y="210" key="run.anything.popup/0.23.1440.801@0.23.1440.801" timestamp="1590025720275" />
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup" timestamp="1590380913811">
-      <screen x="0" y="0" width="1440" height="900" />
-    </state>
-    <state x="385" y="196" width="670" height="676" key="search.everywhere.popup/0.0.1440.900@0.0.1440.900" timestamp="1590380913811" />
-    <state x="1953" y="200" width="894" height="812" key="search.everywhere.popup/1440.-35.1920.1080/0.0.1440.900@1440.-35.1920.1080" timestamp="1589936836018" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -387,7 +332,7 @@
     </breakpoint-manager>
     <pin-to-top-manager>
       <pinned-members>
-        <PinnedItemInfo typeName="java.lang.Boolean" fieldName="value" />
+        <PinnedItemInfo />
       </pinned-members>
     </pin-to-top-manager>
   </component>

@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ng-auth
+  namespace: default
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: ng-auth
+  template:
+    metadata:
+      labels:
+        app: ng-auth
+    spec:
+      containers:
+        - image: cmidhun/ng-auth:0.0.1-SNAPSHOT
+          name: ng-auth
+          imagePullPolicy: Always
+          resources:
+            requests:
+              memory: "50Mi"
+              cpu: "500m"
+            limits:
+              memory: "500Mi"
+              cpu: "2000m"
+          ports:
+            - containerPort: 9090

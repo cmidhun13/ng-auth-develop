@@ -22,7 +22,7 @@ spec:
               memory: "50Mi"
               cpu: "500m"
             limits:
-              memory: "500Mi"
+              memory: "250Mi"
               cpu: "2000m"
           ports:
             - containerPort: 9090
